@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Weather</title>
+</head>
+<body>
+<div class="contain">
+    <nav class="p-3 flex justify-between items-center bg-[#1E202B] text-white md:h-[8rem] h-[10rem] px-6">
+      <div class="flex justify-between items-center  w-full md:w-[80%] md:m-auto ">
+
+          <div class="flex items-cente r gap-5">
+              
+                  <img src="./images/logo.png" alt="">
+                  <h3 class="text-2xl font-semibold">Weather</h3>
+          </div>
+          <div class="hidden md:block">
+            <button class="border px-4 text-sm rounded-2xl border-[#019BD8] text-[#019BD8]">Home</button>
+            <button class="hover:border px-4 text-sm rounded-2xl hover:border-[#019BD8] hover:text-[#019BD8]">News</button>
+            <button class="hover:border px-4 text-sm rounded-2xl hover:border-[#019BD8] hover:text-[#019BD8]">Live camera</button>
+            <button class="hover:border px-4 text-sm rounded-2xl hover:border-[#019BD8] hover:text-[#019BD8]">Contact</button>
+            <button class="hover:border px-4 text-sm rounded-2xl hover:border-[#019BD8] hover:text-[#019BD8]">Photo</button>
+         
+          </div>
+      <div class="md:hidden">
+          <i class="fa-solid fa-bars text-2xl font-semibold text-[#019BD8]"></i>
+      </div>
+      </div>
+
+    </nav>
+    <section class="bg-[url('./images/banner.png')] bg-no-repeat bg-[#1E202B]">
+        <div class="py-16">
+            <div class="bg-[#1E202B] md:w-[60%] text-white w-[95%] m-auto rounded-3xl flex justify-between items-center  px-1">
+                <input id="location" class="w-full focus:outline-none bg-[#1E202B] text-sm ms-3" placeholder="Find your location..." type="text">
+                <button class="bg-[#019BD8] p-2 rounded-3xl px-8 my-1">find</button>
+            </div>
+        </div>
+        <div class="table w-full mt-3  p-3 pb-12 md:flex md:m-auto md:w-[60%] px-[80px] md:px-0">
+            <div class="flex flex-col md:w-[35%] ">
+                <div class="day rounded-tr-xl rounded-tl-xl bg-[#2D303D] text-sm flex justify-between p-3 text-[#ffffff9c]">
+                    <p id="first">Tuesday</p>
+                    <p id="second">1Octoer</p>
+                </div>
+                <div class="cairo bg-[#323544] md:min-h-[25rem] text-[#ffffff9c] p-3 h-[20rem] flex flex-col justify-evenly">
+                    <p id="city">Cairo</p>
+                    <div class="flex items-center gap-4 flex-wrap flex-w text-[70px] text-white">
+                        <h1 id="temp1">29.1c</h1>
+                            <img id="img" src="./images/113.png" alt="">
+                    </div>
+                    <p id="cloud" class=" text-[#019BD8] p-3 text-sm">Cloud</p>
+                    <div class="flex gap-4 text-sm">
+                        <div><i class="fa-solid fa-umbrella"></i> <p id="stat"> 20%</p></div>
+                        <div> <i class="fa-solid fa-wind"></i><p id="stat2">18km/h% </p> </div>
+                        <div><i class="fa-solid fa-compass"></i><p id="stat3">east</p> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col  md:w-[30%]">
+                <div class="day  bg-[#222530] text-sm flex justify-center p-3 text-[#ffffff9c]">
+                    <p id="third">wedensday</p>
+                   
+                </div>
+                <div class="cairo bg-[#262936] text-[#ffffff9c] md:min-h-[25rem] p-3 h-[20rem] flex flex-col items-center justify-evenly">
+                    <div class="flex flex-col items-center gap-4 f text-white">
+                        <img id="img2" src="./images/113.png" alt="">
+                        <h1 id="temp2" class="text-white text-3xl font-bold">37.3c</h1>
+                        <h1 id="temp3">24.5c</h1>
+
+                    </div>
+                    <p id="cloud2" class=" text-[#019BD8] p-3 text-sm">Cloud</p>
+                 
+                </div>
+            </div>
+            <div class="flex flex-col md:w-[30%]">
+                <div class="day  bg-[#2D303D] text-sm flex justify-center p-3 text-[#ffffff9c]">
+                    <p id="four">thursday</p>
+                   
+                </div>
+                <div class="cairo bg-[#323544] rounded-br-xl rounded-bl-xl md:min-h-[25rem] text-[#ffffff9c] p-3 h-[20rem] flex flex-col items-center justify-evenly">
+                    <div class="flex flex-col items-center gap-4 f text-white">
+                        <img id="img3" src="./images/113.png" alt="">
+                        <h1 id="temp4" class="text-white text-3xl font-bold">38.2c</h1>
+                        <h1 id="temp5">25.1c</h1>
+
+                    </div>
+                    <p id="cloud3" class=" text-[#019BD8] p-3 text-sm">Cloud</p>
+                 
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-[#323544]">
+
+        <div class="md:flex w-full md:justify-center  md:gap-9 md:items-baseline">
+            <div class="pt-6 md:w-[40%]">
+                <div class="bg-[#1E202B] md:w-full text-white w-[95%] md:h-12 m-auto rounded-3xl flex justify-between items-center  px-1">
+                    <input class="bg-[#1E202B] text-sm ms-3 w-full" placeholder="Enter your Email to subscribe..." type="text">
+                    <button class="bg-[#019BD8] p-2 rounded-3xl md:px-3 px-8 my-1">Subscribe</button>
+                </div>
+            </div>
+            <div class="p-3 flex gap-4">
+                <div class=" text-[#019BD8]">
+                    <i class="fa-brands fa-facebook text-3xl"></i>
+                </div>
+                <div class=" text-[#019BD8]">
+                    <i class="fa-brands fa-twitter text-3xl"></i>                </div>
+                <div class=" text-[#019BD8]">
+                    <i class="fa-brands fa-google text-3xl"></i>                </div>
+                <div class=" text-[#019BD8]">
+                    <i class="fa-brands fa-pinterest text-3xl"></i>                </div>
+            </div>
+
+        </div>
+      <p  class="text-white px-5 pb-3 md:flex md:justify-center text-sm">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+    </footer>
+</div>    
+
+    <script src="./js.js"></script>
+</body>
+</html>
